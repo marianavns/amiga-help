@@ -5,7 +5,7 @@ const fs = require('fs')
 const create = (request, response) => {
 
     criticalData1 = request.body.firstName
-    criticalData2 = request.body.language
+    criticalData2 = request.body.languages
 
     if (criticalData1 == undefined || criticalData2 == undefined ) {
         return response.status(200).send({ err : `knowing angel's first name and language is critical. please enter both information correctly.`})

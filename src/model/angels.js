@@ -11,7 +11,7 @@ const angelsSchema = new mongoose.Schema({
     linux: Boolean,
     availableTime: Array,
     email: String,
-    othersContacts: String,
+    othersContacts: Array,
     observations: String,
 },{
     versionKey: false

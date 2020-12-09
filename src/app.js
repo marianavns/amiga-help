@@ -17,9 +17,9 @@ db.once('open', function (){
   console.log('DB connection successful!')
 })
 
-const index = require('./routes/index')
-const angels = require('./routes/angelsRoute')
-const blesseds = require('./routes/blessedsRoute')
+const index = require('./routes/index.js')
+const angels = require('./routes/angelsRoute.js')
+const blesseds = require('./routes/blessedsRoute.js')
 
 app.use(bodyParser.json());
 

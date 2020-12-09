@@ -33,7 +33,7 @@ app.use(function (request, response, next) {
   })
 
 app.use('/', index)
-app.use('/teajudo', angels)
+app.use('/anjas', angels)
 app.use('/precisodeajuda', blesseds)
 
 module.exports = app

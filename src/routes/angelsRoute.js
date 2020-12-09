@@ -8,7 +8,7 @@ router.post('/', controller.create)
 router.get('/', controller.readAll)
 router.get('/linguagem/:languages?', controller.readByLanguage)
 router.get('/linux', controller.readByLinux)
-// router.patch('/anything', controller.anything)
+router.patch('/:_id', controller.updateAngelByID)
 // router.delete('/anything', controller.anything)
 
 module.exports = router

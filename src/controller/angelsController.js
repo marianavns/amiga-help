@@ -66,10 +66,39 @@ const readByLinux = (request, response) => {
     })
 }
 
+const updateAngelByID = (request, response) => {
+    const inputID = request.params._id
+    const updateEntry = request.body
+    angels.updateMany(
+        { _id: inputID },
+        { $set : updateEntry }, 
+        { upsert : true },
+        function(err){
+            if (err) {
+                response.status(500).send({ message: err.message })
+            } else {
+                response.status(200).send({ message : `Attributes: [${Object.keys(updateEntry)}] have been updated successfully.`})
+            }
+        }
+    )
+}
+
+const deleteByDocID = (req, res) => {
+    const id = req.params._id
+    councilors.deleteMany({ _id : id }, function(err){
+        if (err) {
+            res.status(500).send({ message: err.message })
+        } else {
+            res.status(200).send({ message : `ID Doc ${id} was been deleted.`})
+        }
+    })
+}
+
 module.exports = {
     create,
     readAll,
     readByLanguage,
-    readByLinux
+    readByLinux,
+    updateAngelByID
 
 }

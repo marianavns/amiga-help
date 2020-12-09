@@ -26,7 +26,6 @@ const create = (request, response) => {
 }
 
 const readAll = (request, response) => {
-    console.log("readAll")
     angels.find(function (err, results) {
         if (err) {
             response.status(500).send({ message: err.message })
@@ -37,7 +36,6 @@ const readAll = (request, response) => {
 }
 
 const readByLanguage = (request, response) => {
-    console.log("readByLanguage")
     const inputLanguage = request.query.languages
     angels.find(
         { languages: inputLanguage}, 
@@ -53,7 +51,6 @@ const readByLanguage = (request, response) => {
 }
 
 const readByLinux = (request, response) => {
-    console.log("readByLinux")
     angels.find(
         { linux : true },
         '-_id firstName languages email othersContacts',

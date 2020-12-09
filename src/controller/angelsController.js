@@ -83,22 +83,26 @@ const updateAngelByID = (request, response) => {
     )
 }
 
-const deleteByDocID = (req, res) => {
+const deleteAngelByID = (req, res) => {
     const id = req.params._id
-    councilors.deleteMany({ _id : id }, function(err){
-        if (err) {
-            res.status(500).send({ message: err.message })
-        } else {
-            res.status(200).send({ message : `ID Doc ${id} was been deleted.`})
+    angels.deleteMany(
+        {_id : id },
+        function(err){
+            if (err) {
+                res.status(500).send({ message: err.message })
+            } else {
+                res.status(200).send({ message : `ID Doc ${id} was been deleted.`})
+            }
         }
-    })
+    )
 }
+
 
 module.exports = {
     create,
     readAll,
     readByLanguage,
     readByLinux,
-    updateAngelByID
-
+    updateAngelByID,
+    deleteAngelByID
 }

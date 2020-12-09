@@ -25,7 +25,6 @@ const create = (request, response) => {
     })
 }
 
-
 const readAll = (request, response) => {
     angels.find(function (err, results) {
         if (err) {
@@ -36,7 +35,38 @@ const readAll = (request, response) => {
     })
 }
 
+const readByLanguage = (request, response) => {
+    const inputLanguage = request.query.languages
+    angels.find(
+        { languages: inputLanguage}, 
+        '-_id firstName languages email othersContacts', 
+        function (err, results) {
+            if (err) {
+                response.status(500).send({ message: err.message })
+            } else {
+                response.status(200).send(results)
+            }
+        }
+    )
+}
+
+const readByLinux = (request, response) => {
+    angels.find(
+        { linux : true },
+        '-_id firstName languages email othersContacts',
+        function (err, result) {
+            if (err) {
+                response.status(500).send({ message: err.message })
+            } else {
+                response.status(200).send(result)
+            }
+    })
+}
+
 module.exports = {
     create,
-    readAll
+    readAll,
+    readByLanguage,
+    readByLinux
+
 }

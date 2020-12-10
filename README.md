@@ -8,7 +8,7 @@ Projeto desenvolvido com o apoio:
 A API *Amiga, Help!* tem a proposta de unir mulheres da área de tecnologia para aquela *ajudinha básica e rápida* que todas nós precisamos às vezes!  Está tendo problemas no desenvolvimento de algo, não consegue mais ver onde pode ser o erro e precisa de uma mana para trocar ideia e para encontrar uma solução juntas?  🕵🏽‍♀️🕵🏼‍♀️
 
 </br>
-
+</br>
 Encontre uma *anja* que conhece a linguagem que você está usando e seja abençoada mandando aquele já clássico: **"Amiga, help!"**
 
 - Para ler a proposta completa, clique [aqui](#Proposta-Completa-do-Projeto).

@@ -9,7 +9,7 @@ router.get('/', controller.readAll)
 router.get('/linguagem/:languages?', controller.readByLanguage)
 router.get('/username/:userName?', controller.readByUserName)
 router.get('/linux', controller.readByLinux)
-router.patch('/:_id', controller.updateAngelByID)
-router.delete('/:_id', controller.deleteAngelByID)
+router.patch('/:userName', controller.updateByUserName)
+router.delete('/:userName', controller.deleteByUserName)
 
 module.exports = router

@@ -76,7 +76,7 @@ const readByUserName = (request, response) => {
 const readByLinux = (request, response) => {
     angels.find(
         { linux : true },
-        '-_id firstName languages email othersContacts',
+        '-_id firstName userName technologies languages contact othersContacts',
         function (err, result) {
             if (err) {
                 response.status(500).send({ message: err.message })
@@ -86,32 +86,32 @@ const readByLinux = (request, response) => {
     })
 }
 
-const updateAngelByID = (request, response) => {
-    const inputID = request.params._id
+const updateByUserName = (request, response) => {
+    const inputUserName = request.params.userName
     const updateEntry = request.body
     angels.updateMany(
-        { _id: inputID },
+        { userName: inputUserName },
         { $set : updateEntry }, 
         { upsert : true },
         function(err){
             if (err) {
                 response.status(500).send({ message: err.message })
             } else {
-                response.status(200).send({ message : `Attributes: [${Object.keys(updateEntry)}] have been updated successfully.`})
+                response.status(200).send({ message : `${inputUserName} ${Object.keys(updateEntry)} attributes have been updated successfully.`})
             }
         }
     )
 }
 
-const deleteAngelByID = (req, res) => {
-    const id = req.params._id
+const deleteByUserName = (request, response) => {
+    const inputUserName = request.params.userName
     angels.deleteMany(
-        {_id : id },
+        { userName : inputUserName },
         function(err){
             if (err) {
-                res.status(500).send({ message: err.message })
+                response.status(500).send({ message: err.message })
             } else {
-                res.status(200).send({ message : `ID Doc ${id} was been deleted.`})
+                response.status(200).send({ message : `angel's ${inputUserName} docs was deleted successfully.`})
             }
         }
     )
@@ -124,6 +124,6 @@ module.exports = {
     readByLanguage,
     readByUserName,
     readByLinux,
-    updateAngelByID,
-    deleteAngelByID
+    updateByUserName,
+    deleteByUserName
 }

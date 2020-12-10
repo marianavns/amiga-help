@@ -48,7 +48,7 @@ const readByLanguage = (request, response) => {
     const inputLanguage = request.query.languages
     angels.find(
         { languages: inputLanguage}, 
-        '-_id firstName languages email othersContacts', 
+        '-_id firstName userName technologies languages contact othersContacts', 
         function (err, results) {
             if (err) {
                 response.status(500).send({ message: err.message })

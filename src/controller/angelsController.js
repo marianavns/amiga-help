@@ -83,22 +83,39 @@ const readByLinux = (request, response) => {
             } else {
                 response.status(200).send(result)
             }
-    })
+        }
+    )
 }
 
 const updateByUserName = (request, response) => {
     const inputUserName = request.params.userName
     const updateEntry = request.body
     angels.updateMany(
-        { userName: inputUserName },
+        { userName : inputUserName },
         { $set : updateEntry }, 
-        { upsert : true },
+        { upsert : false },
         function(err){
             if (err) {
                 response.status(500).send({ message: err.message })
             } else {
                 response.status(200).send({ message : `${inputUserName} ${Object.keys(updateEntry)} attributes have been updated successfully.`})
             }
+        }
+    )
+}
+
+const updateByID = (request, response) => {
+    const inputID = request.params._id
+    const updateEntry = request.body
+    angels.updateOne(
+        { _id : inputID }, 
+        { $set : updateEntry }, 
+        { upsert : false }, 
+        function (err) {
+            if (err) {
+                return response.status(500).send({ message: err.message })
+            }
+        return response.status(200).send({ message : `${Object.keys(updateEntry)} attributes in doc _id ${inputID} have been updated successfully.`});
         }
     )
 }
@@ -125,5 +142,6 @@ module.exports = {
     readByUserName,
     readByLinux,
     updateByUserName,
+    updateByID,
     deleteByUserName
 }

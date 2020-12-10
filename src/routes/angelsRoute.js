@@ -11,6 +11,6 @@ router.get('/username/:userName?', controller.readByUserName)
 router.get('/linux', controller.readByLinux)
 router.patch('/:userName', controller.updateByUserName)
 router.put('/:_id', controller.updateByID)
-router.delete('/:userName', controller.deleteByUserName)
+router.delete('/:_id', controller.deleteByID)
 
 module.exports = router

@@ -120,15 +120,15 @@ const updateByID = (request, response) => {
     )
 }
 
-const deleteByUserName = (request, response) => {
-    const inputUserName = request.params.userName
+const deleteByID = (request, response) => {
+    const inputID = request.params._id
     angels.deleteMany(
-        { userName : inputUserName },
+        { _id : inputID },
         function(err){
             if (err) {
                 response.status(500).send({ message: err.message })
             } else {
-                response.status(200).send({ message : `angel's ${inputUserName} docs was deleted successfully.`})
+                response.status(200).send({ message : `${inputID} doc was deleted successfully.`})
             }
         }
     )
@@ -143,5 +143,5 @@ module.exports = {
     readByLinux,
     updateByUserName,
     updateByID,
-    deleteByUserName
+    deleteByID
 }

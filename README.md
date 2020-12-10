@@ -11,6 +11,9 @@ A API *Amiga, Help!* tem a proposta de unir mulheres da área de tecnologia para
 </br>
 Encontre uma *anja* que conhece a linguagem que você está usando e seja abençoada mandando aquele já clássico: **"Amiga, help!"**
 
+</br>
+</br>
+
 - Para ler a proposta completa, clique [aqui](#Proposta-Completa-do-Projeto).
 
 ## Sumário
@@ -79,12 +82,11 @@ Encontre uma *anja* que conhece a linguagem que você está usando e seja abenç
 
 ### Manipulando os registros de *abençoadas*
 
-| Descrição                                    | Método | Rota            |
-| -------------------------------------------- | ------ | --------------- |
-| Adicionar uma nova ideia                     | POST   | /ideias         |
-| Visualizar todas as ideias apresentadas      | GET    | /ideias         |
-| Visualiza as ideias e bairros de onde vieram | GET    | /ideias/bairros |
-| Atualiza uma ideia pelo e-mail cadastrado    | PATCH  | /ideias         |
+| Feature                                                 | Método | Rota                          |
+| ------------------------------------------------------- | ------ | ----------------------------- |
+| Adicionar uma pessoa que precisa de ajuda (*abençoada*) | POST   | /precisodeajuda               |
+| Visualizar todos registros de abençoadas                | GET    | /precisodeajuda               |
+| Visualizar pessoas abençoadas pela linguagem usada      | GET    | /precisodeajuda/?needLanguage |
 
 ## Proposta Completa do Projeto
 

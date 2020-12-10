@@ -59,6 +59,20 @@ const readByLanguage = (request, response) => {
     )
 }
 
+const readByUserName = (request, response) => {
+    const inputUserName = request.query.userName
+    angels.find(
+        { userName: inputUserName}, 
+        function (err, results) {
+            if (err) {
+                response.status(500).send({ message: err.message })
+            } else {
+                response.status(200).send(results)
+            }
+        }
+    )
+}
+
 const readByLinux = (request, response) => {
     angels.find(
         { linux : true },
@@ -108,6 +122,7 @@ module.exports = {
     create,
     readAll,
     readByLanguage,
+    readByUserName,
     readByLinux,
     updateAngelByID,
     deleteAngelByID

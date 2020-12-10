@@ -4,15 +4,24 @@ const fs = require('fs')
 
 const create = (request, response) => {
 
-    criticalData1 = request.body.firstName
+    criticalData1 = request.body.userName
     criticalData2 = request.body.languages
+    criticalData3 = request.body.contact
 
-    if (criticalData1 == undefined || criticalData2 == undefined ) {
-        return response.status(200).send({ err : `knowing angel's first name and language is critical. please enter both information correctly.`})
+    if (criticalData1 == undefined || criticalData2 == undefined || criticalData3 == undefined) {
+        return response.status(200).send({ err : `userName, languages and contact are criticals datas. please enter all informations correctly.`})
     }
 
-    if (criticalData1.length <= 1) {
-        return response.status(200).send({ err : `added angel name has less than two letters. please check this information.`})
+    if (criticalData1.length <= 2) {
+        return response.status(200).send({ err : `angel's userName has less than 3 letters. please check this information.`})
+    }
+
+    if (criticalData2.length <= 0) {
+        return response.status(200).send({ err : `please add your programming language.`})
+    }
+
+    if (criticalData3.length <= 8) {
+        return response.status(200).send({ err : `angel's contact has less than 7 letters. please check this information.`})
     }
 
     let angel = new angels(request.body)
@@ -20,7 +29,7 @@ const create = (request, response) => {
         if (err) {
             response.status(500).send({ message: err.message })
         } else {
-            response.status(201).send({ message : `angel [${criticalData1}] was added successfully.`})
+            response.status(201).send({ message : `angel with userName ${criticalData1} was added successfully.`})
         }
     })
 }

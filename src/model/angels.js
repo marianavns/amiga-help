@@ -2,21 +2,23 @@ const mongoose = require('mongoose')
 
 const angelsSchema = new mongoose.Schema({
     firstName: String,
+    userName: String,
     fullName: String,
     yearOfBirth: Number,
-    city: String,
     scope: Array,
-    languages: Array,
     technologies: Array,
+    languages: Array,
     linux: Boolean,
     availableTime: Array,
-    email: String,
+    contact: String,
+    linkedin: String,
     othersContacts: Array,
     observations: String,
 },{
     versionKey: false
 })
 
+// critical datas: userName, languages, contact
 const angels = mongoose.model('angels', angelsSchema)
 
 module.exports = angels

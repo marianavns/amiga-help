@@ -4,15 +4,8 @@
 
 Projeto desenvolvido com o apoio:
 
-<img src="/images/logo-reprograma.jpg" alt="logo da instituição reprograma" width="40%" align="left"/>
-</br>
-</br>
-</br>
-</br>
-</br>
-A API *Amiga, Help!* tem a proposta de unir mulheres da área de tecnologia para aquela *ajudinha básica e rápida* que todas nós precisamos às vezes! 
-
-Está tendo problemas no desenvolvimento de algo, não consegue mais ver onde pode ser o erro e precisa de uma mana para trocar ideia e para encontrar uma solução juntas?  🕵🏽‍♀️🕵🏼‍♀️
+<img src="/images/logo-reprograma.jpg" alt="logo da instituição reprograma" width="40%"/>
+A API *Amiga, Help!* tem a proposta de unir mulheres da área de tecnologia para aquela *ajudinha básica e rápida* que todas nós precisamos às vezes!  Está tendo problemas no desenvolvimento de algo, não consegue mais ver onde pode ser o erro e precisa de uma mana para trocar ideia e para encontrar uma solução juntas?  🕵🏽‍♀️🕵🏼‍♀️
 
 Encontre uma *anja* que conhece a linguagem que você está usando e seja abençoada mandando aquele já clássico: **"Amiga, help!"**
 

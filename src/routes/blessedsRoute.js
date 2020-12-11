@@ -11,7 +11,8 @@ router.get('/linguagem/:needLanguage?', controller.readQuestionsByLanguage)
 router.get('/id/:_id?', controller.readQuestionByID)
 router.put('/:id', controller.updateQuestionByID)
 router.patch('/:username?', controller.updateBlessedByUserName)
-
+router.delete('/:id', controller.deleteQuestionByID)
+router.delete('/:username?', controller.deleteBlessedByUserName)
 
 
 module.exports = router

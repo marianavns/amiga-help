@@ -121,6 +121,34 @@ const updateBlessedByUserName = (request, response) => {
     )
 }
 
+const deleteQuestionByID = (request, response) => {
+    const inputID = request.params.id
+    blesseds.deleteOne(
+        { _id : inputID },
+        (err) => {
+            if (err) {
+                return response.status(500).send({ message: err.message })
+            } 
+            return response.status(200).send({ message : `${inputID} doc was deleted successfully.`})
+        }
+    )
+}
+
+
+const deleteBlessedByUserName = (request, response) => {
+    const inputUserName = request.query.username
+    blesseds.deleteMany(
+        { userName : inputUserName },
+        (err) => {
+            if (err) {
+                return response.status(500).send({ message: err.message })
+            } 
+            response.status(200).send({ message : `${inputUserName} doc was deleted successfully.`})
+        }
+    )
+}
+
+
 module.exports = {
     create,
     readAll,
@@ -129,4 +157,6 @@ module.exports = {
     readQuestionByID,
     updateQuestionByID,
     updateBlessedByUserName,
+    deleteQuestionByID,
+    deleteBlessedByUserName
 }

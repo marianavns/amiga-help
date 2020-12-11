@@ -4,6 +4,7 @@ const blessedsSchema = new mongoose.Schema({
     firstName: String,
     userName: String,
     fullName: String,
+    password: String,
     yearOfBirth: Number,
     needScope: String,
     needTechnology: String,

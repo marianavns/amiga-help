@@ -1,6 +1,7 @@
 const blesseds = require("../model/blesseds")
 
 const fs = require('fs')
+const bcrypt = require('bcrypt')
 
 const create = (request, response) => {
 
@@ -29,6 +30,9 @@ const create = (request, response) => {
         return response.status(200).send({ warning : `contact added has less than 10 letters. please check this information.`})
     }
 
+    const passwordHash = bcrypt.hashSync(request.body.password, 10)
+    request.body.password = passwordHash 
+    
     let blessed = new blesseds(request.body)
     blessed.save(function(err){
         if (err) {

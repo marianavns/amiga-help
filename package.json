@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/marianavns/amiga-help#readme",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "dotenv-safe": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.11.5"

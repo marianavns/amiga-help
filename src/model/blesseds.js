@@ -8,7 +8,7 @@ const blessedsSchema = new mongoose.Schema({
     needScope: String,
     needTechnology: String,
     needLanguage: String,
-    questioning: String,
+    question: String,
     linux: Boolean,
     availableTime: Array,
     contact: String,
@@ -19,7 +19,7 @@ const blessedsSchema = new mongoose.Schema({
     versionKey: false
 })
 
-// critical datas: userName, needLanguage, questioning, contact
+// critical datas: userName, needLanguage, question, contact
 const blesseds = mongoose.model('blesseds', blessedsSchema)
 
 module.exports = blesseds

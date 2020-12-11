@@ -20,8 +20,8 @@ const create = (request, response) => {
         return response.status(200).send({ err : `please add your programming language.`})
     }
 
-    if (criticalData3.length <= 8) {
-        return response.status(200).send({ err : `angel's contact has less than 7 letters. please check this information.`})
+    if (criticalData3.length <= 9) {
+        return response.status(200).send({ err : `contact added has less than 10 letters. please check this information.`})
     }
 
     let angel = new angels(request.body)

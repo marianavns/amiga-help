@@ -1,6 +1,7 @@
 const angels = require( '../model/angels.js' )
 
 const fs = require('fs')
+const bcrypt = require('bcrypt')
 
 const create = (request, response) => {
 
@@ -23,6 +24,9 @@ const create = (request, response) => {
     if (criticalData3.length <= 9) {
         return response.status(200).send({ err : `contact added has less than 10 letters. please check this information.`})
     }
+
+    const passwordHash = bcrypt.hashSync(request.body.password, 10)
+    request.body.password = passwordHash
 
     let angel = new angels(request.body)
     angel.save(function(err){

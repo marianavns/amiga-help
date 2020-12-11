@@ -4,6 +4,7 @@ const angelsSchema = new mongoose.Schema({
     firstName: String,
     userName: String,
     fullName: String,
+    password: String,
     yearOfBirth: Number,
     scope: Array,
     technologies: Array,

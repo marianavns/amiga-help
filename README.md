@@ -1,18 +1,14 @@
-[![Deploy on heroku](https://img.shields.io/badge/deploy-heroku.com-blueviolet)](http://amiga-help.herokuapp.com/)  ![GitHub deployments](https://img.shields.io/github/deployments/marianavns/amiga-help/amigahelp)
+   [![Deploy on heroku](https://img.shields.io/badge/deploy-heroku.com-blueviolet)](http://amiga-help.herokuapp.com/)  ![GitHub deployments](https://img.shields.io/github/deployments/marianavns/amiga-help/amigahelp)
 
 # Amiga, Help!
 
 Projeto desenvolvido com o apoio:
 
 <img src="/images/logo-reprograma.jpg" alt="logo da instituição reprograma" width="40%"/>
+
 A API *Amiga, Help!* tem a proposta de unir mulheres da área de tecnologia para aquela *ajudinha básica e rápida* que todas nós precisamos às vezes!  Está tendo problemas no desenvolvimento de algo, não consegue mais ver onde pode ser o erro e precisa de uma mana para trocar ideia e para encontrar uma solução juntas?  🕵🏽‍♀️🕵🏼‍♀️
 
-</br>
-</br>
 Encontre uma *anja* que conhece a linguagem que você está usando e seja abençoada mandando aquele já clássico: **"Amiga, help!"**
-
-</br>
-</br>
 
 - Para ler a proposta completa, clique [aqui](#Proposta-Completa-do-Projeto).
 
@@ -21,6 +17,8 @@ Encontre uma *anja* que conhece a linguagem que você está usando e seja abenç
 1. [Principais Funções da API](#Principais-Funções-da-API)
 2. [Instruções de uso](#Instruções-de-uso)
 3. [Tecnologias](#Tecnologias)
+   - [Para construção da API](#Para-construção-da-API)
+   - [Para uso da API](#Para-uso-da-API)
 4. [Features e rotas](#Features-e-rotas)
    - [Manipulando os registros de anjas](#Manipulando-os-registros-de-anjas)
    - [Manipulando os registros de abençoadas](#Manipulando-os-registros-de-abençoadas)
@@ -71,14 +69,16 @@ Encontre uma *anja* que conhece a linguagem que você está usando e seja abenç
 
 ### Manipulando os registros de *anjas*
 
-| Feature                                                      | Método | Rota              |
-| ------------------------------------------------------------ | ------ | ----------------- |
-| Adiciona uma anja                                            | POST   | /anjas            |
-| Visualiza todos os registros cadastrados                     | GET    | /anjas            |
-| Pesquisa a anja pela linguagem                               | GET    | /anjas/linux      |
-| Visualiza as anjas que usam linux (para maiores informações, clique aqui) | GET    | /anjas/?languages |
-| Adiciona ou atualiza atributos de uma anja                   | PATCH  | /anja/:username   |
-| Exclui registro de uma anja pelo número do id no banco de dados | DELETE | /anja/:_id        |
+| Feature                                                      | Método | Rota                        |
+| ------------------------------------------------------------ | ------ | --------------------------- |
+| Adicionar uma anja                                           | POST   | /anjas                      |
+| Visualizar todos os registros cadastrados                    | GET    | /anjas                      |
+| Pesquisar a anja pela linguagem                              | GET    | /anjas/linguagem/?languages |
+| Pesquisar as informações de uma anja pelo username           | GET    | /anjas/username/?userName   |
+| Visualizar as anjas que usam linux (para maiores informações, clique aqui) | GET    | /anja/linux                 |
+| Editar o registro completo de uma anja, buscando pelo id     | PUT    | /anja/:_id                  |
+| Editar atributos de uma anja, encontrando-a pelo username    | PATCH  | /anja/:userName             |
+| Excluir registro de uma anja pelo número do id no banco de dados | DELETE | /anja/:_id                  |
 
 ### Manipulando os registros de *abençoadas*
 
@@ -87,6 +87,8 @@ Encontre uma *anja* que conhece a linguagem que você está usando e seja abenç
 | Adicionar uma pessoa que precisa de ajuda (*abençoada*) | POST   | /precisodeajuda               |
 | Visualizar todos registros de abençoadas                | GET    | /precisodeajuda               |
 | Visualizar pessoas abençoadas pela linguagem usada      | GET    | /precisodeajuda/?needLanguage |
+| Editar atributos de um documento, buscando pelo id      | PATCH  | /precisodeajuda/              |
+| Excluir documento pelo id                               | DELETE | /precisodeajuda/:id           |
 
 ## Proposta Completa do Projeto
 

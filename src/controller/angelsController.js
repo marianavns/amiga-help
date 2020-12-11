@@ -4,39 +4,49 @@ const fs = require('fs')
 const bcrypt = require('bcrypt')
 
 const create = (request, response) => {
-
     criticalData1 = request.body.userName
     criticalData2 = request.body.languages
     criticalData3 = request.body.contact
 
-    if (criticalData1 == undefined || criticalData2 == undefined || criticalData3 == undefined) {
-        return response.status(200).send({ err : `userName, languages and contact are criticals datas. please enter all informations correctly.`})
-    }
-
-    if (criticalData1.length <= 2) {
-        return response.status(200).send({ err : `angel's userName has less than 3 letters. please check this information.`})
-    }
-
-    if (criticalData2.length <= 0) {
-        return response.status(200).send({ err : `please add your programming language.`})
-    }
-
-    if (criticalData3.length <= 9) {
-        return response.status(200).send({ err : `contact added has less than 10 letters. please check this information.`})
-    }
-
-    const passwordHash = bcrypt.hashSync(request.body.password, 10)
-    request.body.password = passwordHash
-
-    let angel = new angels(request.body)
-    angel.save(function(err){
+    angels.findOne({ userName : criticalData1 }, (err, result) => {
         if (err) {
-            response.status(500).send({ message: err.message })
-        } else {
-            response.status(201).send({ message : `angel with userName ${criticalData1} was added successfully.`})
+            return response.status(500).send({ message: err.message });
         }
+        if (result) {
+            return response.status(404).send({ warning: `username ${criticalData1} is not available`})
+        }
+    
+        if (criticalData1 == undefined || criticalData2 == undefined || criticalData3 == undefined) {
+            return response.status(200).send({ err : `userName, languages and contact are criticals datas. please enter all informations correctly.`})
+        }
+
+        if (criticalData1.length <= 2) {
+            return response.status(200).send({ err : `angel's userName has less than 3 letters. please check this information.`})
+        }
+
+        if (criticalData2.length <= 0) {
+            return response.status(200).send({ err : `please add your programming language.`})
+        }
+
+        if (criticalData3.length <= 9) {
+            return response.status(200).send({ err : `contact added has less than 10 letters. please check this information.`})
+        }
+
+        const passwordHash = bcrypt.hashSync(request.body.password, 10)
+        request.body.password = passwordHash
+
+        let angel = new angels(request.body)
+        angel.save(function(err){
+            if (err) {
+                response.status(500).send({ message: err.message })
+            } else {
+                response.status(201).send({ message : `angel with userName ${criticalData1} was added successfully.`})
+            }
+        })
     })
 }
+
+
 
 const readAll = (request, response) => {
     angels.find(function (err, results) {

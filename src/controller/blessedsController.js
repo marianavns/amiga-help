@@ -61,9 +61,72 @@ const readQuestionsByUserName = (request, response) => {
     )
 }
 
+const readQuestionsByLanguage = (request, response) => {
+    const inputLanguage = request.query.needLanguage
+    blesseds.find(
+        { needLanguage: inputLanguage}, 
+        'needLanguage question userName contact availableTime', 
+        function (err, results) {
+            if (err) {
+                response.status(500).send({ message: err.message })
+            } else {
+                response.status(200).send(results)
+            }
+        }
+    )
+}
+
+const readQuestionByID = (request, response) => {
+    const inputID = request.query.id
+    blesseds.find(
+        { _id: inputID },
+        (err, results) => {
+            if (err) {
+               return response.status(500).send({ message: err.message })
+            } 
+            response.status(200).send(results)
+        }
+    )
+}
+
+const updateQuestionByID = (request, response) => {
+    const inputID = request.params.id
+    const updateEntry = request.body
+    blesseds.updateOne(
+        { _id : inputID }, 
+        { $set : updateEntry }, 
+        { upsert : false }, 
+        (err) => {
+            if (err) {
+                return response.status(500).send({ message: err.message })
+            }
+        return response.status(200).send({ message : `${Object.keys(updateEntry)} attributes in doc _id ${inputID} have been updated successfully.`});
+        }
+    )
+}
+
+const updateBlessedByUserName = (request, response) => {
+    const inputUserName = request.query.username
+    const updateEntry = request.body
+    blesseds.updateMany(
+        { userName : inputUserName },
+        { $set : updateEntry }, 
+        { upsert : false },
+        (err) => {
+            if (err) {
+                return response.status(500).send({ message: err.message })
+            }
+            response.status(200).send({ message : `${inputUserName} ${Object.keys(updateEntry)} attributes have been updated successfully.`})
+        }
+    )
+}
 
 module.exports = {
     create,
     readAll,
-    readQuestionsByUserName
+    readQuestionsByUserName,
+    readQuestionsByLanguage,
+    readQuestionByID,
+    updateQuestionByID,
+    updateBlessedByUserName,
 }

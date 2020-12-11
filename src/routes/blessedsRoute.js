@@ -6,7 +6,12 @@ const controller = require('../controller/blessedsController')
 
 router.post('/', controller.create)
 router.get('/', controller.readAll)
-router.get('/minhasduvidas', controller.readQuestionsByUserName)
+router.get('/minhasduvidas/:userName?', controller.readQuestionsByUserName)
+router.get('/linguagem/:needLanguage?', controller.readQuestionsByLanguage)
+router.get('/id/:_id?', controller.readQuestionByID)
+router.put('/:id', controller.updateQuestionByID)
+router.patch('/:username?', controller.updateBlessedByUserName)
+
 
 
 module.exports = router

@@ -18,10 +18,10 @@ Encontre uma *anja* que conhece a linguagem que você está usando e seja *aben�
 
 1. [Principais Features da API](#-Principais-Features-da-API)
 2. [Instruções de uso](#-Instruções-de-uso)
-3. [Tecnologias Utilizadas](#🛠-Tecnologias-Utilizadas)
+3. [Tecnologias Utilizadas](#-Tecnologias-Utilizadas)
    - [Para construção da API](#Para-construção-da-API)
    - [Para uso da API](#Para-uso-da-API)
-4. [Features e rotas](#-Features-e-rotas)
+4. [Features e rotas](#-Features-e-Rotas)
    - [Manipulando os registros de anjas](#Manipulando-os-registros-de-anjas)
    - [Manipulando os registros de abençoadas](#Manipulando-os-registros-de-abençoadas)
 5. [Proposta Completa do Projeto](#-Proposta-Completa-do-Projeto)
@@ -47,7 +47,7 @@ Encontre uma *anja* que conhece a linguagem que você está usando e seja *aben�
 | <br /><img src="./images/papaleguas.gif" alt="Personagem Papaleguas correndo para a direita." width=20%> <br /><br /> **"Só quero ver a API funcionando..."**. <br />Abra o aplicativo [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/related?hl=pt-BR) e use o endereço https://amigahelp.herokuapp.com/ como URL para testar as features e rotas que estão [aqui](#Features-e-rotas).<br /> |
 | <br /><img src="./images/tyra-typing.gif" alt="Mulher digitando na frente de um computador." width=20% vertical-align=center>**<br /><br />"Quero ver como o código foi feito, criar meu próprio banco de dados, explorar e alterar!"**<br />- Tenha instalados os programas [Node.js](https://nodejs.org/en/download/) e [MongoDB](https://www.mongodb.com/try/download/community), além de um editor de códigos; <br />- Clone o projeto: `git clone https://github.com/marianavns/amiga-help`<br />- Dentro da pasta do projeto, digite `npm install` no cmd para baixar as dependências do projeto;<br />- Renomeie o arquivo `.env.exemple` para `.env` e insira as variáveis de ambiente pedidas.<br /> |
 
-## 🛠️ Tecnologias utilizadas
+## 🛠️ Tecnologias Utilizadas
 
 ### Para construção da API
 
@@ -68,7 +68,7 @@ Encontre uma *anja* que conhece a linguagem que você está usando e seja *aben�
 - **Heroku.com**: *deploy* da aplicação na web;
 - **MongoDB Atlas**: hospedagem do banco de dados na nuvem.
 
-## ✔️ Features e rotas
+## ✔️ Features e Rotas
 
 ### Manipulando os registros de *anjas*
 
@@ -105,7 +105,7 @@ Mas como achar uma pessoa para pedir aquela ajuda rápida ou para dar aquela mã
 
 Para solucionar essas questões, veio a *Amiga, Help!*, que é uma frase já tradicional quando estamos precisando daquela ajuda pontual. O projeto nasceu nos últimos dias de um bootcamp excelente de 18 semanas do qual tive a felicidade de participar na instituição {[Reprograma](https://reprograma.com.br/)}. *Amigas, Help!* nasceu, sim, na última semana, mas estava sendo gerado desde o começo do curso, porque desde o primeiro dia ficou evidente que pedir ajuda e ajudar alguém em um problema faz com que a evolução seja mais rápida e saudável. 
 
-**Esta API, então, traz soluções para fazer o encontro entre a mulher que precisa de um *help* e a mulher que está disposta a dar essa mãozinha. É possível encontrar uma mana pela linguagem que ela usa, verificar que horários ela está disponível, localizar dúvidas de acordo com uma linguagem específica e [muito mais](#-Features-e-rotas)**.
+**Esta API, então, traz soluções para fazer o encontro entre a mulher que precisa de um *help* e a mulher que está disposta a dar essa mãozinha. É possível encontrar uma mana pela linguagem que ela usa, verificar que horários ela está disponível, localizar dúvidas de acordo com uma linguagem específica e [muito mais](#-Features-e-Rotas)**.
 
 > ⚡ E atenção! Não é obrigatório ser super eficiente e com anos de experiência numa linguagem para ajudar uma mana. É preciso, apenas, conhecer a linguagem e verificar na breve descrição da dúvida se você entende algo daquela questão. As vezes é só uma olhadinha no código, um bug insistente que já foi conferido mil vezes por outra pessoa, mas que está só precisando do seu olhar para encontrá-lo. Pode ter certeza que tem alguém esperando por você!  Let's code, baby! 
 
@@ -119,7 +119,7 @@ Não que seja um fator determinante em todas as situações, claramente, mas pod
 
 ## 👩🏽‍🏫 Aprendizados
 
-Além do conhecimento adquirido nas [tecnologias usadas](#-Tecnologias-utilizadas) para o desenvolvimento do projeto, fica o aprendizado de gestão de tempo, dimensionamento do que é ou não relevante em termos de dados a resgatar e como fazer correlações valiosas e efetivas entre quem precisa de algo e quem pode suprir esta falta.
+Além do conhecimento adquirido nas [tecnologias usadas](#-Tecnologias-Utilizadas) para o desenvolvimento do projeto, fica o aprendizado de gestão de tempo, dimensionamento do que é ou não relevante em termos de dados a resgatar e como fazer correlações valiosas e efetivas entre quem precisa de algo e quem pode suprir esta falta.
 
 E, passando do escopo deste projeto específico, o aprendizado mais importante que ficou impresso, dentre tantos outros, é que **a vontade constante de aprender em uma mulher, associada a uma rede de apoio consistente e presente, é uma força imparável**.
 

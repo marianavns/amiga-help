@@ -3,13 +3,14 @@
 # <h1 align="center"> ✨ Amiga, Help! ✨
 
    <p align="center"> 
-      <a href=”https://amigahelp.herokuapp.com/”>amigahelp.herokuapp.com</a>
+      https://amigahelp.herokuapp.com/
    </p>
-   
+
+
 </h1>
  <br>
 
-<p align=center>Projeto desenvolvido com o apoio:</p>
+<p align=center>Projeto desenvolvido com o apoio</p>
 
 <h1 align="center">
     <img src="./images/logo-reprograma.jpg" width="40%" ></img>

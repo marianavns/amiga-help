@@ -2,7 +2,10 @@
 
 # <h1 align="center"> ✨ Amiga, Help! ✨
 
-<p align="center"> <a align="center" href=”https://amigahelp.herokuapp.com/”>amigahelp.herokuapp.com</a></p>
+   <p align="center"> 
+      <a href=”https://amigahelp.herokuapp.com/”>amigahelp.herokuapp.com</a>
+   </p>
+   
 </h1>
  <br>
 
@@ -16,7 +19,7 @@ A API *Amiga, Help!* tem a proposta de unir mulheres da área de tecnologia para
 
 Encontre uma *anja* que conhece a linguagem que você está usando e seja *abençoada* mandando aquele já clássico: **"Amiga, help!"**
 
-- Para ler a proposta completa, clique [aqui](#Proposta-Completa-do-Projeto).
+- Para ler a proposta completa, clique [aqui](#-Proposta-Completa-do-Projeto).
 
 ## Tabela de Conteúdos
 

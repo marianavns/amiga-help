@@ -52,7 +52,7 @@ Encontre uma *anja* que conhece a linguagem que você está usando e seja *aben�
 
 |                Como você quer usar esta API?                 |
 | :----------------------------------------------------------: |
-| <br /><img src="./images/papaleguas.gif" alt="Personagem Papaleguas correndo para a direita." width=20%> <br /><br /> **"Só quero ver a API funcionando..."**. <br />Abra o aplicativo [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/related?hl=pt-BR) e use o endereço https://amigahelp.herokuapp.com/ como URL para testar as features e rotas que estão [aqui](#Features-e-rotas).<br /> |
+| <br /><img src="./images/papaleguas.gif" alt="Personagem Papaleguas correndo para a direita." width=20%> <br /><br /> **"Só quero ver a API funcionando..."**. <br />Abra o aplicativo [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/related?hl=pt-BR) e use o endereço https://amigahelp.herokuapp.com/ como URL para testar as features e rotas.<br /> |
 | <br /><img src="./images/tyra-typing.gif" alt="Mulher digitando na frente de um computador." width=20% vertical-align=center>**<br /><br />"Quero ver como o código foi feito, criar meu próprio banco de dados, explorar e alterar!"**<br />- Tenha instalados os programas [Node.js](https://nodejs.org/en/download/) e [MongoDB](https://www.mongodb.com/try/download/community), além de um editor de códigos; <br />- Clone o projeto: `git clone https://github.com/marianavns/amiga-help`<br />- Dentro da pasta do projeto, digite `npm install` no cmd para baixar as dependências do projeto;<br />- Renomeie o arquivo `.env.exemple` para `.env` e insira as variáveis de ambiente pedidas.<br /> |
 
 ## 🛠️ Tecnologias Utilizadas
@@ -86,7 +86,7 @@ Encontre uma *anja* que conhece a linguagem que você está usando e seja *aben�
 | Visualizar todos os registros cadastrados                    | GET    | /anjas                      |
 | Pesquisar a anja pela linguagem                              | GET    | /anjas/linguagem/?languages |
 | Pesquisar as informações de uma anja pelo username           | GET    | /anjas/username/?userName   |
-| Visualizar as anjas que usam linux (para maiores informações, clique [aqui](O-motivo-da-pergunta-sobre-o-linux)) | GET    | /anja/linux                 |
+| Visualizar as anjas que usam linux (para maiores informações, clique [aqui](#O-motivo-da-pergunta-sobre-o-linux)) | GET    | /anja/linux                 |
 | Editar o registro completo de uma anja, buscando pelo id     | PUT    | /anja/:_id                  |
 | Editar atributos de uma anja, encontrando-a pelo username    | PATCH  | /anja/:userName             |
 | Excluir registro de uma anja pelo número do id no banco de dados | DELETE | /anja/:_id                  |

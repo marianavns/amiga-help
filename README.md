@@ -1,12 +1,16 @@
    [![Deploy on heroku](https://img.shields.io/badge/deploy-heroku.com-blueviolet)](http://amiga-help.herokuapp.com/)  ![GitHub deployments](https://img.shields.io/github/deployments/marianavns/amiga-help/amigahelp) ![](https://img.shields.io/badge/construction-in%20progress-yellow)
 
-# <h1 align="center">Amiga, Help!</h1>
+# <h1 align="center"> ✨ Amiga, Help! ✨
 
-<p align="center">Projeto desenvolvido com o apoio:</p>
+<p align="center"> <a align="center" href=”https://amigahelp.herokuapp.com/”>amigahelp.herokuapp.com</a></p>
+</h1>
+ <br>
 
-<img src="./images/logo-reprograma.jpg" alt="logo da instituição reprograma" width="40%" />
+<p align=center>Projeto desenvolvido com o apoio:</p>
 
-- [amigahelp.herokuapp.com](https://amigahelp.herokuapp.com/)
+<h1 align="center">
+    <img src="./images/logo-reprograma.jpg" width="40%" ></img>
+</h1>
 
 A API *Amiga, Help!* tem a proposta de unir mulheres da área de tecnologia para aquela *ajudinha básica e rápida* que todas nós precisamos às vezes! Apareceu um problema no desenvolvimento de algo, não consegue mais ver onde pode ser o erro e precisa de uma mana para trocar ideia e encontrar uma solução juntas?  🕵🏽‍♀️🕵🏼‍♀️
 

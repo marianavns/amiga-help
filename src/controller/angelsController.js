@@ -65,10 +65,12 @@ const readByLanguage = (request, response) => {
         '-_id firstName userName technologies languages contact othersContacts', 
         function (err, results) {
             if (err) {
-                response.status(500).send({ message: err.message })
-            } else {
-                response.status(200).send(results)
+                return response.status(500).send({ message: err.message })
             }
+            if (results.length == 0) {
+                return response.status(404).send(`don't have angels registered for this language yet.`)
+            }
+            return response.status(200).send(results)
         }
     )
 }
